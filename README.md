@@ -4,7 +4,14 @@ This project emulates a Mitsubishi Heat Pump. I've built this mostly by analyzin
 
 In order to use you need a USB to TTL Serial adapter with FTDI, or any other means of making a serial connection. 
 
+Find which port is used for the adapter (`COMn` on Windows, or a path to `/dev/ttyUSBn` on Linux), adjust the code to point to the right place:
+```
+val expectedPort = "COM5"
+```
+
 You need to install [sbt](https://www.scala-sbt.org/), then in the root of the project run `sbt run SerialHeatPump.main`.
+
+Note that this project acts as a heat pump, in order to talk to it you need a client such as MHK1, or libraries such as https://github.com/akamali/mhk1_mqtt or https://github.com/SwiCago/HeatPump.
 
 If all is good then you will see
 ```
