@@ -2,6 +2,8 @@
 
 This project emulates a Mitsubishi Heat Pump. I've built this mostly by analyzing the packets between MHK1 and my air handler, and also by studying libraries such as https://github.com/SwiCago/HeatPump.
 
+Goal of this project is to make it easier to develop libraries that talk to Mitsubishi heat pumps over the CN105 port. By using this library one program an ESP32/ESP8266 and connect it with this library without having to directly interact with the heat pump. In my case I was developing a library on ESP32 during Winter and I couldn't disconnect my heat pump to play around with it :-)
+
 In order to use you need a USB to TTL Serial adapter with FTDI, or any other means of making a serial connection. 
 
 Find which port is used for the adapter (`COMn` on Windows, or a path to `/dev/ttyUSBn` on Linux), adjust the code to point to the right place:
